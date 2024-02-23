@@ -8,8 +8,8 @@ public class Movement : MonoBehaviour
     Rigidbody2D _rigidbody2D;
     Vector2 _moveVel;
     float _moveDir;
-    [SerializeField] private float moveSpeed = 10f;
-    [SerializeField] private float jumpForce = 10f;
+    [SerializeField] private float moveSpeed = 233f;
+    [SerializeField] private float jumpForce = 7f;
     private bool _jumpPressed;
     private bool _isGrounded;
 
