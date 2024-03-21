@@ -4,23 +4,34 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    private static Camera _camera;
-    private static GameObject _player;
+
+    [SerializeField]
+    private float speed = 1f;
+    [SerializeField]
+    private Transform target;
+    [SerializeField]
+    private Vector3 offset;
     // Start is called before the first frame update
     void Start()
     {
-        _camera = GetComponent<Camera>();
-        _player = GameObject.FindGameObjectWithTag("Player");
+        offset = target.position - transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
+        if (target)
+        {
+            Vector3 anchorPos = transform.position+offset;
+            Vector3 movement = target.position - anchorPos;
 
+            Vector3 newCamPos = transform.position + movement * speed * Time.deltaTime;
+            transform.position = newCamPos;
+        }
+    }
     private void FixedUpdate()
     {
-        _camera.transform.position = new Vector3(_player.transform.position.x, _player.transform.position.y, _camera.transform.position.z);
+
     }
+
 }
