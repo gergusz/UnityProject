@@ -4330,6 +4330,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 324841135019816015, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 324841135019816015, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -4368,6 +4372,14 @@ PrefabInstance:
     - target: {fileID: 324841135019816015, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066558776914066458, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: maxJumps
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066558776914066458, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: jumpForce
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8593039730757904937, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
       propertyPath: m_Name
