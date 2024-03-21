@@ -9,13 +9,24 @@ public class Tiling : MonoBehaviour
   
     private Transform tilesTrans;
     private Camera cam;
-    private float spriteWidth = 0f;
+    private float checkingWidth = 100f;
+    private float checkingHeight = 100f;
 
     // Start is called before the first frame update
     void Start()
     {
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteWidth = Mathf.Abs(spriteRenderer.sprite.bounds.size.x * tilesTrans.localScale.x);
+        if (spriteRenderer == null)
+        {
+            Collider2D collider = GetComponent<Collider2D>();
+            checkingWidth = Mathf.Abs(collider.bounds.size.x * tilesTrans.localScale.x);
+            checkingHeight = Mathf.Abs(collider.bounds.size.y * tilesTrans.localScale.y);
+        }
+        else
+        {
+            checkingWidth = Mathf.Abs(spriteRenderer.sprite.bounds.size.x * tilesTrans.localScale.x);
+            checkingHeight = Mathf.Abs(spriteRenderer.bounds.size.y * tilesTrans.localScale.y);
+        }
     }
     private void Awake()
     {
@@ -30,10 +41,19 @@ public class Tiling : MonoBehaviour
         {
             float camHorizontalExtend = cam.orthographicSize * Screen.width / Screen.height;
 
-            float edgeVisiblePositonRight = (tilesTrans.position.x + spriteWidth / 2) - camHorizontalExtend;
-            float edgeVisiblePositonLeft = (tilesTrans.position.x - spriteWidth / 2) + camHorizontalExtend;
 
-            if (cam.transform.position.x >= edgeVisiblePositonRight && !hasRight)
+            float edgeVisiblePositonRight = (tilesTrans.position.x + checkingWidth / 2) - camHorizontalExtend;
+            float edgeVisiblePositonLeft = (tilesTrans.position.x - checkingWidth / 2) + camHorizontalExtend;
+            
+            float camVertical = cam.orthographicSize * Screen.height / Screen.width;
+
+            float topOfCam =(tilesTrans.position.y+checkingHeight/2) - camVertical;
+            float bottomOfCam = (tilesTrans.position.y - checkingHeight / 2) + camVertical;
+            if (cam.transform.position.y-20f >= topOfCam || cam.transform.position.y+20f<=bottomOfCam )
+            {
+
+            }
+            else if (cam.transform.position.x >= edgeVisiblePositonRight && !hasRight)
             {
                 makeNewBuddy(false);
                 hasRight = true;
@@ -42,13 +62,14 @@ public class Tiling : MonoBehaviour
             {
                 makeNewBuddy(true);
                 hasLeft = true;
+                
             }
         } 
     }
 
     void makeNewBuddy(bool left)
     {
-        Vector3 newPosition = new Vector3(tilesTrans.position.x + spriteWidth * (left ? -1 : 1),
+        Vector3 newPosition = new Vector3(tilesTrans.position.x + checkingWidth * (left ? -1 : 1),
                                             tilesTrans.position.y, tilesTrans.position.z);
         Transform newBuddy = Instantiate(tilesTrans, newPosition, tilesTrans.rotation) as Transform;
 
