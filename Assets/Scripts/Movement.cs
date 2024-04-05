@@ -18,6 +18,12 @@ public class Movement : MonoBehaviour
     private bool _jumpButtonHeldDown;
     private bool _canJump = true;
 
+    
+    private int dashCounter =0;
+    private float lastDashPress = 0f;
+    [SerializeField]
+    private float dashCD = 0f;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -63,6 +69,15 @@ public class Movement : MonoBehaviour
             _canJump = true;
         }
 
+        if (dashCD>-0.01&&dashCD<0.01)
+        {
+            Dasher();
+        }
+        else if(dashCD>0)
+        {
+            dashCD -= Time.fixedDeltaTime;
+        }
+
     }
 
     private void TryJump()
@@ -81,6 +96,42 @@ public class Movement : MonoBehaviour
         }
     }
 
+    private void Dasher()
+    {
+        if(lastDashPress <= 0)
+        {
+            dashCounter = 0;
+        }
+        else
+        {
+            lastDashPress -= Time.fixedDeltaTime;
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            if (dashCounter % 2 == 0)
+            {
+                lastDashPress = 0.3f;
+                dashCounter++;
+            }
+        }
+        else
+        {
+            if (dashCounter % 2 == 1)
+                dashCounter++;
+        }
+        
+        if (dashCounter == 4)
+        {
+            _rb.AddForce(new Vector2(100f * (_facingLeft ? -1 : 1), 0f), ForceMode2D.Impulse);
+            
+            lastDashPress = 0f;
+            dashCounter = 0;
+            dashCD = 3f;
+        }
+     
+    }
+
     private void Flip()
     {
         _facingLeft = !_facingLeft;
@@ -94,4 +145,5 @@ public class Movement : MonoBehaviour
         _onGround = true;
         _jumps = 0;
     }
+
 }
