@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
     private bool _jumpButtonHeldDown;
     private bool _canJump = true;
 
-    
+    [SerializeField]
     private int dashCounter =0;
     private float lastDashPress = 0f;
     [SerializeField]
@@ -68,7 +68,7 @@ public class Movement : MonoBehaviour
         {
             _canJump = true;
         }
-
+        
         if (dashCD>-0.01&&dashCD<0.01)
         {
             Dasher();
@@ -107,7 +107,7 @@ public class Movement : MonoBehaviour
             lastDashPress -= Time.fixedDeltaTime;
         }
 
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             if (dashCounter % 2 == 0)
             {
