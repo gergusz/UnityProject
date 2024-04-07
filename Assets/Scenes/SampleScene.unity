@@ -750,6 +750,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &220658541
 PrefabInstance:
+  m_GameObject: {fileID: 259416158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b1624a41d78ed4d96f7b4754b8265a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeItem: 0
+--- !u!1 &288757581
+GameObject:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
@@ -8628,3 +8637,4 @@ SceneRoots:
   - {fileID: 880713525}
   - {fileID: 59418135}
   - {fileID: 1725394186}
+  - {fileID: 414704338}

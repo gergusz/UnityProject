@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BottomOfMap
   - Block
+  - Enemy
   layers:
   - Default
   - TransparentFX
