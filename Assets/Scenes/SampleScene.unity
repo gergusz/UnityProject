@@ -7316,6 +7316,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e593f12a61fe44f4bbd14b4a0a5e93eb, type: 3}
+--- !u!1 &1733037425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1733037427}
+  - component: {fileID: 1733037426}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1733037426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733037425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eec08f705836154695a2152a0a21179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 7174920524565148771, guid: 7f8cda4cc722595439529d588d805b99, type: 3}
+  - {fileID: 3680801595729368621, guid: b2b4473499b87fe41b44f21a1e57ef8a, type: 3}
+  enemyPool: []
+--- !u!4 &1733037427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733037425}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5061471, y: -1.1408799, z: -0.06773605}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1745034949 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 3043257777472078460, guid: c8a9183c679a6784bbd026105e4a0b10, type: 3}
@@ -8638,3 +8686,4 @@ SceneRoots:
   - {fileID: 880713525}
   - {fileID: 59418135}
   - {fileID: 1725394186}
+  - {fileID: 1733037427}
