@@ -107,7 +107,7 @@ public class Movement : MonoBehaviour
             lastDashPress -= Time.fixedDeltaTime;
         }
 
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             if (dashCounter % 2 == 0)
             {
