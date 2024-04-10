@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private int maxJumps = 1;
     private Rigidbody2D _rb;
-    private bool _facingLeft;
+    public bool _facingLeft;
     private bool _onGround;
     private int _jumps;
     private float _horizontalAxis;
