@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    public float useCd = 10f;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            if(collision.gameObject.GetComponent<Inventory>().AddItem(this))
+            if (collision.gameObject.GetComponent<Inventory>().AddItem(this))
                 this.gameObject.SetActive(false);
         }
     }
-    protected virtual void Use()
+    public virtual void Use()
     {
 
     }

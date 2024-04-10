@@ -19,8 +19,8 @@ public class BgMove : MonoBehaviour
 
 
          Vector3 vel_of_character= characterToMove.GetComponent<Rigidbody2D>().velocity;
-            vel_of_character = new Vector3(vel_of_character.x * -0.5f, 0f, 0f);
-            transform.Translate(vel_of_character * Time.deltaTime, Camera.main.transform);
+            vel_of_character = new Vector3(vel_of_character.x, 0f, 0f);
+            transform.Translate(-vel_of_character * Mathf.Abs(10 / transform.position.z) * Time.deltaTime, Camera.main.transform);
  
     }
 
@@ -28,7 +28,7 @@ public class BgMove : MonoBehaviour
     void Update()
     {
         if (characterToMove == null)
-            transform.Translate(Vector3.right * Time.deltaTime, Camera.main.transform);
+            transform.Translate(Vector3.right * (10/transform.position.z) * Time.deltaTime, Camera.main.transform);
         else
             MoveChar();
 
