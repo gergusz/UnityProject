@@ -19,7 +19,7 @@ public class EnemySpawnBox : MonoBehaviour
             for (int i = 0; i < 10; i++)
             {
                 enemyPool.Add(Instantiate(enemyType));
-                enemyPool[enemyPool.Count - 1].gameObject.SetActive(false);
+                enemyPool[^1].gameObject.SetActive(false);
             }
         }
     }
@@ -41,8 +41,9 @@ public class EnemySpawnBox : MonoBehaviour
         var tospawn = Mathf.RoundToInt(Random.Range(0f, enemyPool.Count-1));
         if (!enemyPool[tospawn].gameObject.activeSelf)
         {
-
-            Vector3 whereToSpawn = new Vector3(Random.Range(-15f, 15f) + playerTrans.position.x, playerTrans.position.y, 0f);
+            float xPos = playerTrans.position.x;
+            xPos += Random.Range(3f, 15f) *(Random.Range(0f, 1f)>0.5f?1f:-1f);
+            Vector3 whereToSpawn = new Vector3(xPos, playerTrans.position.y, 0f) ;
             enemyPool[tospawn].transform.position = whereToSpawn;
             enemyPool[tospawn].gameObject.SetActive(true);
         }
