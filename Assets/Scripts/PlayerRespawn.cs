@@ -11,32 +11,36 @@ public class PlayerRespawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playa= GameObject.FindGameObjectWithTag("Player");
+        playa = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (respawnSequenceStarted&& respawnTimer < 0f)
+        if (respawnSequenceStarted && respawnTimer < 0f)
         {
             RespawnPlayer();
         }
-        else if(respawnSequenceStarted)
+        else if (respawnSequenceStarted)
             respawnTimer -= Time.deltaTime;
     }
 
     private void RespawnPlayer()
     {
-        
+
         playa.gameObject.SetActive(true);
         playa.GetComponent<PlayerTakeDamage>().FillHealthBar();
-        playa.transform.position=new Vector2(0f, 0f);
+        playa.transform.position = new Vector2(0f, 0f);
         respawnTimer = 2f;
         respawnSequenceStarted = false;
     }
     public void InitiateRespawn()
     {
-        respawnSequenceStarted =true;
+        respawnSequenceStarted = true;
+    }
+    public bool IsPlayerAlive()
+    {
+        return !respawnSequenceStarted;
     }
 
 }

@@ -23,6 +23,7 @@ public class Movement : MonoBehaviour
     private float lastDashPress = 0f;
     [SerializeField]
     private float dashCD = 0f;
+    private float velocitySetterCd = 0f;
 
     private void Awake()
     {
@@ -45,9 +46,16 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        var currVelocity = _rb.velocity;
-        currVelocity.x = _horizontalAxis * speed;
-        _rb.velocity = currVelocity;
+        if (velocitySetterCd <= 0f)
+        {
+            var currVelocity = _rb.velocity;
+            currVelocity.x = _horizontalAxis * speed;
+            _rb.velocity = currVelocity;
+        }
+        else
+        {
+            velocitySetterCd -= Time.fixedDeltaTime;
+        }
 
         if (_horizontalAxis < 0 && !_facingLeft)
         {
@@ -123,7 +131,8 @@ public class Movement : MonoBehaviour
         
         if (dashCounter == 4)
         {
-            _rb.AddForce(new Vector2(100f * (_facingLeft ? -1 : 1), 0f), ForceMode2D.Impulse);
+            DisableVelocitySetting(0.1f);
+            _rb.AddForce(new Vector2(40f * (_facingLeft ? -1 : 1), 1f), ForceMode2D.Impulse);
             
             lastDashPress = 0f;
             dashCounter = 0;
@@ -146,4 +155,8 @@ public class Movement : MonoBehaviour
         _jumps = 0;
     }
 
+    public void DisableVelocitySetting(float disableTime)
+    {
+        velocitySetterCd = disableTime;
+    }
 }

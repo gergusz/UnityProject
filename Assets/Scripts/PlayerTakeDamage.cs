@@ -51,6 +51,10 @@ public class PlayerTakeDamage : MonoBehaviour
         {
             currentLife--;
             regenProgress = timeToRegenALife;
+            var a = collision.transform.position.x - transform.position.x;
+            //collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(a*2f, 2f), ForceMode2D.Impulse);
+            gameObject.GetComponent<Movement>().DisableVelocitySetting(0.2f);
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-a * 4f, 3f), ForceMode2D.Impulse);
         }
     }
 
