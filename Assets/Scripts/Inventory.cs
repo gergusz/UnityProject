@@ -12,10 +12,12 @@ public class Inventory : MonoBehaviour
     private float itemsUseCd = 1f;
     private float useCdRemaining = 0f;
 
+    private GameObject gameController;
     // Start is called before the first frame update
     void Start()
     {
         firePoint = transform.Find("Point");
+        gameController = GameObject.FindGameObjectWithTag("GameController");
         for (var i = 0; i < mainInventory.Length; i++)
         {
             mainInventory[i] = null;
@@ -45,7 +47,7 @@ public class Inventory : MonoBehaviour
             
             ChangeItem();
         }
-        if (Input.GetMouseButton(0) && mainInventory[activeItem] && Mathf.Abs(useCdRemaining)<0.01)
+        if (Input.GetMouseButton(0)&& gameController.GetComponent<PlayerRespawn>().IsPlayerAlive() && mainInventory[activeItem] && Mathf.Abs(useCdRemaining)<0.01)
         {
             mainInventory[activeItem].Use();
             useCdRemaining = itemsUseCd;
