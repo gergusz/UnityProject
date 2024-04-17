@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 5438249506074628114}
   - component: {fileID: 2595407085590619104}
   - component: {fileID: 6744875952799988455}
+  - component: {fileID: 5012661679898327242}
   m_Layer: 7
-  m_Name: Slime_Spiked_Ability_0
+  m_Name: Slime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1395342028, guid: 9e019d53dfb5a3a4bb6f0832bf30d868, type: 3}
+  m_Sprite: {fileID: -1749602962, guid: 19eaf3ca76421eb40858c537ca956be4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,7 +124,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5277778, y: 0.5}
+    oldSize: {x: 0.76666665, y: 0.5}
     newSize: {x: 0.5277778, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -171,3 +172,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d38067df5113946a92d3b24ad5975e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &5012661679898327242
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7174920524565148771}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: de16cc37c6ee20b41a78ff09d63662f1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
