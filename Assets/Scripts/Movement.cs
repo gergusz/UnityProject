@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour
     private float _horizontalAxis;
     private bool _jumpButtonHeldDown;
     private bool _canJump = true;
+    private Animator _animator;
 
     [SerializeField]
     private int dashCounter =0;
@@ -28,6 +29,7 @@ public class Movement : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
     
 
@@ -51,6 +53,8 @@ public class Movement : MonoBehaviour
             var currVelocity = _rb.velocity;
             currVelocity.x = _horizontalAxis * speed;
             _rb.velocity = currVelocity;
+            _animator.SetFloat("speed", Mathf.Abs(_horizontalAxis));
+
         }
         else
         {
