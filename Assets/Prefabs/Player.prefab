@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2122177957640705038}
   - component: {fileID: 2162770429475450618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,9 +72,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 2970804571792025586, guid: c0a39cd12fc68c543a78a5ff3b741a98, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,7 +96,7 @@ GameObject:
   m_Layer: 0
   m_Name: BalPivot
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -126,7 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4466286360565810815}
   - component: {fileID: 2877551606243606781}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Jobb k\xE9z"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: -1841618070715920906, guid: a628f4d80e9c239419edcc7e8098f697, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -210,7 +210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2418659577239557938}
   - component: {fileID: 7298619045855791232}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fej
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 8496527588354136419, guid: a628f4d80e9c239419edcc7e8098f697, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -294,7 +294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4547811496048596167}
   - component: {fileID: 7939609823284408554}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Bal l\xE1b"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,13 +309,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2820339548248584318}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.13917309, w: 0.9902681}
-  m_LocalPosition: {x: 0.105, y: -0.485, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.185, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 324841135019816015}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 16}
+  m_Father: {fileID: 7782075581581437907}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7939609823284408554
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -356,7 +356,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: -2550254333390021232, guid: a628f4d80e9c239419edcc7e8098f697, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -368,6 +368,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3037728315639797271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1916628488641871784}
+  m_Layer: 0
+  m_Name: "Jobbl\xE1bPivot"
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1916628488641871784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3037728315639797271}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.08, y: -0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 851579972909331329}
+  m_Father: {fileID: 324841135019816015}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 29.976192}
 --- !u!1 &5044857688644741379
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 851579972909331329}
   - component: {fileID: 7399927022562698959}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Jobb l\xE1b"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,13 +425,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5044857688644741379}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.13917309, w: 0.9902681}
-  m_LocalPosition: {x: -0.105, y: -0.485, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.185, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 324841135019816015}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -16}
+  m_Father: {fileID: 1916628488641871784}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7399927022562698959
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -440,7 +472,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: -2550254333390021232, guid: a628f4d80e9c239419edcc7e8098f697, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -462,7 +494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2214236745717195028}
   - component: {fileID: 7337642121485487230}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Bal k\xE9z"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,7 +556,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: -1841618070715920906, guid: a628f4d80e9c239419edcc7e8098f697, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -536,6 +568,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5972722375648900996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7782075581581437907}
+  m_Layer: 0
+  m_Name: "Ball\xE1bPivot"
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7782075581581437907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5972722375648900996}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.08, y: -0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4547811496048596167}
+  m_Father: {fileID: 324841135019816015}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6577370376500229913
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +612,7 @@ GameObject:
   m_Layer: 0
   m_Name: JobbPivot
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -581,7 +645,9 @@ GameObject:
   - component: {fileID: 1385877899825253780}
   - component: {fileID: 8066558776914066458}
   - component: {fileID: 2178368905068555770}
-  m_Layer: 0
+  - component: {fileID: 7700689073074006519}
+  - component: {fileID: 6733262717982712906}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -603,11 +669,11 @@ Transform:
   m_Children:
   - {fileID: 4260921250854413930}
   - {fileID: 2418659577239557938}
-  - {fileID: 851579972909331329}
-  - {fileID: 4547811496048596167}
   - {fileID: 2122177957640705038}
   - {fileID: 8928884209705342914}
   - {fileID: 6608731126190450999}
+  - {fileID: 1916628488641871784}
+  - {fileID: 7782075581581437907}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5960685986751073163
@@ -723,6 +789,41 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &7700689073074006519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8593039730757904937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2d828a7c480de43ba844aee566fa41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLife: 4
+  currentLife: 0
+--- !u!95 &6733262717982712906
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8593039730757904937}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1608be5556c3eed4ea9715d20670ca86, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9086436355566574001
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,7 +834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4260921250854413930}
   - component: {fileID: 6318962834915069038}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -795,7 +896,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 4757852525882595095, guid: a628f4d80e9c239419edcc7e8098f697, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

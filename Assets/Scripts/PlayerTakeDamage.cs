@@ -8,9 +8,16 @@ public class PlayerTakeDamage : MonoBehaviour
     [SerializeField]
     public int currentLife=0;
 
+    private Animator _animator;
+
     private float timeToRegenALife = 2f;
     private float regenProgress = 2f;
- 
+
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +57,8 @@ public class PlayerTakeDamage : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             currentLife--;
+            _animator.ResetTrigger("isHurt");
+            _animator.SetTrigger("isHurt");
             regenProgress = timeToRegenALife;
             var a = collision.transform.position.x - transform.position.x;
             //collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(a*2f, 2f), ForceMode2D.Impulse);
