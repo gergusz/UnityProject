@@ -16,7 +16,7 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        firePoint = transform.Find("Point");
+        firePoint = GameObject.Find("Point").transform;
         gameController = GameObject.FindGameObjectWithTag("GameController");
         for (var i = 0; i < mainInventory.Length; i++)
         {

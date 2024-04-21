@@ -22,12 +22,14 @@ public class PlayerRespawn : MonoBehaviour
             RespawnPlayer();
         }
         else if (respawnSequenceStarted)
+        {
             respawnTimer -= Time.deltaTime;
+        }
+            
     }
 
     private void RespawnPlayer()
     {
-
         playa.gameObject.SetActive(true);
         playa.GetComponent<PlayerTakeDamage>().FillHealthBar();
         playa.transform.position = new Vector2(0f, 0f);

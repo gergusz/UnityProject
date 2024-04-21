@@ -25,12 +25,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318405124200326624}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0, z: 0.11320323, w: 0.9935719}
+  m_LocalPosition: {x: -0.418, y: -0.019, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 324841135019816015}
+  m_Father: {fileID: 4466286360565810815}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2162770429475450618
 SpriteRenderer:
@@ -73,15 +73,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 50
-  m_Sprite: {fileID: 2970804571792025586, guid: c0a39cd12fc68c543a78a5ff3b741a98, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_FlipX: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1607151748500052077
@@ -145,7 +145,8 @@ Transform:
   m_LocalPosition: {x: 0.05, y: -0.21, z: -1}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2122177957640705038}
   m_Father: {fileID: 6608731126190450999}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -13}
 --- !u!212 &2877551606243606781
@@ -380,7 +381,7 @@ GameObject:
   m_Layer: 0
   m_Name: "Jobbl\xE1bPivot"
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -580,7 +581,7 @@ GameObject:
   m_Layer: 0
   m_Name: "Ball\xE1bPivot"
   m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -647,6 +648,7 @@ GameObject:
   - component: {fileID: 2178368905068555770}
   - component: {fileID: 7700689073074006519}
   - component: {fileID: 6733262717982712906}
+  - component: {fileID: 1419308694705492452}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -669,7 +671,6 @@ Transform:
   m_Children:
   - {fileID: 4260921250854413930}
   - {fileID: 2418659577239557938}
-  - {fileID: 2122177957640705038}
   - {fileID: 8928884209705342914}
   - {fileID: 6608731126190450999}
   - {fileID: 1916628488641871784}
@@ -824,6 +825,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1419308694705492452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8593039730757904937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f833262525ab9c54aa4226899b439293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9086436355566574001
 GameObject:
   m_ObjectHideFlags: 0

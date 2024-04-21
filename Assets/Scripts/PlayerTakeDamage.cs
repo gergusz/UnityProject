@@ -35,7 +35,9 @@ public class PlayerTakeDamage : MonoBehaviour
         if (currentLife <= 0)
         {
             GameObject.FindGameObjectWithTag("GameController").GetComponent<PlayerRespawn>().InitiateRespawn();
+            _animator.ResetTrigger("isHurt");
             gameObject.SetActive(false);
+            
 
         }
     }
