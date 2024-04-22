@@ -47,6 +47,7 @@ public class PlayerTakeDamage : MonoBehaviour
         if (regenProgress < 0)
         {
             currentLife++;
+            regenProgress = timeToRegenALife;
         }
         else
         {
