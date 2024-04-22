@@ -8513,9 +8513,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3644858681735274563, guid: 3cd0b6e1448f3d84ba9fbe71a9a2811a, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 192
+      objectReference: {fileID: 0}
     - target: {fileID: 4204293931384783254, guid: 3cd0b6e1448f3d84ba9fbe71a9a2811a, type: 3}
       propertyPath: m_Name
       value: Bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097427688009096168, guid: 3cd0b6e1448f3d84ba9fbe71a9a2811a, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 192
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
