@@ -100,9 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f92ceed0682484bb53bde1b1c11b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useCd: 0.3
+  useCd: 1
   arrowPrefab: {fileID: 8411780335046512074, guid: e499c760166158d49a1c7dac3ff7a639, type: 3}
-  arrowSpeed: 15
+  arrowSpeed: 17
 --- !u!50 &3612499419611032140
 Rigidbody2D:
   serializedVersion: 4
@@ -145,7 +145,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -187,7 +187,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0

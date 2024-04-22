@@ -790,6 +790,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  useCdRemaining: 0
 --- !u!114 &7700689073074006519
 MonoBehaviour:
   m_ObjectHideFlags: 0

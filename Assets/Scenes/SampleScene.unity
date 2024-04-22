@@ -6702,6 +6702,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+
     - target: {fileID: 1385877899825253780, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
       propertyPath: m_Interpolate
       value: 0
@@ -6742,6 +6743,7 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0.025
       objectReference: {fileID: 0}
+
     - target: {fileID: 8593039730757904937, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
       propertyPath: m_Name
       value: Player
