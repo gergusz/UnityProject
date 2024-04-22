@@ -27,7 +27,7 @@ public class Axe : Item
             if (hit.transform.tag == "Tree" && Vector2.Distance(blockpos, playersPos) < 4f) 
             {
                 
-                hit.transform.gameObject.GetComponent<TreeCutDown>().IncreaseCutDown();
+                hit.transform.gameObject.GetComponent<BlockMiner>().IncreaseMinePhase();
             }
 
         }
