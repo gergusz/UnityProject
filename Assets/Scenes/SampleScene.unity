@@ -2093,30 +2093,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5960685986751073163, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
-      propertyPath: m_Size.x
-      value: 0.6782037
-      objectReference: {fileID: 0}
-    - target: {fileID: 5960685986751073163, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
-      propertyPath: m_Size.y
-      value: 1.6872654
-      objectReference: {fileID: 0}
-    - target: {fileID: 5960685986751073163, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.004125595
-      objectReference: {fileID: 0}
-    - target: {fileID: 5960685986751073163, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.0917213
-      objectReference: {fileID: 0}
-    - target: {fileID: 5960685986751073163, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
-      propertyPath: m_EdgeRadius
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8066558776914066458, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
-      propertyPath: jumpForce
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 8593039730757904937, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
       propertyPath: m_Name
       value: Player
