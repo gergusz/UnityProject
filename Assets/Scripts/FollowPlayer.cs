@@ -10,7 +10,7 @@ public class FollowPlayer : MonoBehaviour
     [SerializeField]
     private Transform target;
     [SerializeField]
-    private Vector3 offset;
+    private Vector3 offset; 
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +26,12 @@ public class FollowPlayer : MonoBehaviour
             Vector3 movement = target.position - anchorPos;
 
             Vector3 newCamPos = transform.position + movement * speed * Time.deltaTime;
+
+            if (newCamPos.y > 34.0f)
+            {
+                newCamPos.y = 34.0f;
+            }
+
             transform.position = newCamPos;
         }
     }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BgMove : MonoBehaviour
+public class BgParralax : MonoBehaviour
 {
     [SerializeField]
     private GameObject characterToMove=null;
@@ -12,7 +12,6 @@ public class BgMove : MonoBehaviour
     {
         
     }
-
 
     void MoveChar()
     {
