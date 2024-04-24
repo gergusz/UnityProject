@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dirtBlock Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3081184400311016612, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4795407214979543047, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
       propertyPath: m_SpriteTilingProperty.border.w
       value: 0
@@ -64,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 5315189978236590363, guid: ddcec4fcd9a83424fa83baa9ca746f6c, type: 3}
+    - target: {fileID: 7923730115538701849, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8683753384551305106, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
@@ -86,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8683753384551305106, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8683753384551305106, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
       propertyPath: m_LocalRotation.w

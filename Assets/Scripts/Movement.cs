@@ -26,6 +26,8 @@ public class Movement : MonoBehaviour
     private float dashCD = 0f;
     private float velocitySetterCd = 0f;
 
+    private KeyCode lastDashKey = KeyCode.None;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -123,8 +125,18 @@ public class Movement : MonoBehaviour
         {
             if (dashCounter % 2 == 0)
             {
-                lastDashPress = 0.3f;
-                dashCounter++;
+                KeyCode key_down = Input.GetKey(KeyCode.A) ? KeyCode.A : KeyCode.D;
+
+                if (lastDashKey == KeyCode.None || lastDashKey == key_down)
+                {
+                    dashCounter++;
+                }
+                else
+                {
+                    dashCounter = 1;
+                }
+                lastDashPress = 0.2f;
+                lastDashKey = key_down;
             }
         }
         else
@@ -133,7 +145,7 @@ public class Movement : MonoBehaviour
                 dashCounter++;
         }
         
-        if (dashCounter == 4)
+        if (dashCounter == 3)
         {
             DisableVelocitySetting(0.1f);
             _rb.AddForce(new Vector2(40f * (_facingLeft ? -1 : 1), 1f), ForceMode2D.Impulse);
@@ -145,7 +157,7 @@ public class Movement : MonoBehaviour
      
     }
 
-    private void Flip()
+    public void Flip()
     {
         _facingLeft = !_facingLeft;
         var theScale = transform.localScale;
