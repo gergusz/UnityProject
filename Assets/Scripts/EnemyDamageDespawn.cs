@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyDamageDespawn : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int maxLife =3;
-    private int currentLife = 0;
+    public int maxLife = 3;
+    public int currentLife = 0;
     void Start()
     {
         
@@ -37,7 +37,7 @@ public class EnemyDamageDespawn : MonoBehaviour
         }
     }
 
-    public void Hurt(int damage)
+    public virtual void Hurt(int damage)
     {
         currentLife -= damage;
         if (currentLife <= 0)

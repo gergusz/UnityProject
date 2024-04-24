@@ -646,6 +646,7 @@ GameObject:
   - component: {fileID: 1385877899825253780}
   - component: {fileID: 8066558776914066458}
   - component: {fileID: 2178368905068555770}
+  - component: {fileID: 1894889694101995178}
   - component: {fileID: 7700689073074006519}
   - component: {fileID: 6733262717982712906}
   - component: {fileID: 1419308694705492452}
@@ -763,7 +764,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 7
-  maxJumps: 3
+  maxJumps: 1
+  canDash: 0
   _facingLeft: 0
   dashCounter: 0
   dashCD: 0
@@ -791,6 +793,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   useCdRemaining: 0
+--- !u!114 &1894889694101995178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8593039730757904937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f960d4245146124ca94368c7f8e55dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accessoryInventory: []
 --- !u!114 &7700689073074006519
 MonoBehaviour:
   m_ObjectHideFlags: 0
