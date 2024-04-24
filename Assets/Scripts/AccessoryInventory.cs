@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AccessoryInventory : MonoBehaviour
@@ -17,5 +19,13 @@ public class AccessoryInventory : MonoBehaviour
     {
         accessoryInventory.Remove(accessory);
         accessory.GetComponent<Accessory>().Unequip(gameObject);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.J) && accessoryInventory.Count > 0)
+        {
+            RemoveAccessory(accessoryInventory.Last());
+        }
     }
 }
