@@ -59,15 +59,20 @@ public class PlayerTakeDamage : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            currentLife--;
-            _animator.ResetTrigger("isHurt");
-            _animator.SetTrigger("isHurt");
-            regenProgress = timeToRegenALife;
+            Hurt();
             var a = collision.transform.position.x - transform.position.x;
             //collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(a*2f, 2f), ForceMode2D.Impulse);
             gameObject.GetComponent<Movement>().DisableVelocitySetting(0.2f);
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-a * 2f, 3f), ForceMode2D.Impulse);
         }
+    }
+
+    public void Hurt()
+    {
+        currentLife--;
+        _animator.ResetTrigger("isHurt");
+        _animator.SetTrigger("isHurt");
+        regenProgress = timeToRegenALife;
     }
 
     public void FillHealthBar()

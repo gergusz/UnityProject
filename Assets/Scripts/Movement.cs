@@ -9,7 +9,8 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 5f;
-    [SerializeField] private int maxJumps = 1;
+    [SerializeField] public int maxJumps = 1;
+    [SerializeField] public bool canDash = false;
     private Rigidbody2D _rb;
     public bool _facingLeft;
     private bool _onGround;
@@ -20,7 +21,7 @@ public class Movement : MonoBehaviour
     private Animator _animator;
 
     [SerializeField]
-    private int dashCounter =0;
+    private int dashCounter = 0;
     private float lastDashPress = 0f;
     [SerializeField]
     private float dashCD = 0f;
@@ -82,16 +83,18 @@ public class Movement : MonoBehaviour
         {
             _canJump = true;
         }
-        
-        if (dashCD>-0.01&&dashCD<0.01)
-        {
-            Dasher();
-        }
-        else if(dashCD>0)
-        {
-            dashCD -= Time.fixedDeltaTime;
-        }
 
+        if (canDash)
+        {
+            if (dashCD > -0.01 && dashCD < 0.01)
+            {
+                Dasher();
+            }
+            else if (dashCD > 0)
+            {
+                dashCD -= Time.fixedDeltaTime;
+            }
+        }
     }
 
     private void TryJump()
@@ -112,7 +115,7 @@ public class Movement : MonoBehaviour
 
     private void Dasher()
     {
-        if(lastDashPress <= 0)
+        if (lastDashPress <= 0)
         {
             dashCounter = 0;
         }
