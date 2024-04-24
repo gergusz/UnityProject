@@ -5,9 +5,15 @@ using UnityEngine;
 public class EnemyDamageDespawn : MonoBehaviour
 {
     // Start is called before the first frame update
+    private int maxLife =3;
+    private int currentLife = 0;
     void Start()
     {
         
+    }
+    private void Awake()
+    {
+        currentLife = maxLife;
     }
 
     // Update is called once per frame
@@ -26,6 +32,15 @@ public class EnemyDamageDespawn : MonoBehaviour
             checkPos = players[0].transform.position;
         }
         if (Vector2.Distance(transform.position, checkPos) > 20f)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    public void Hurt(int damage)
+    {
+        currentLife -= damage;
+        if (currentLife <= 0)
         {
             gameObject.SetActive(false);
         }

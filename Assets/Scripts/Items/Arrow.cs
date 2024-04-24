@@ -30,8 +30,8 @@ public class Arrow : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.SetActive(false);
-            gameObject.SetActive(false);
+            collision.gameObject.GetComponent<EnemyDamageDespawn>().Hurt(1);
         }
+        gameObject.SetActive(false);
     }
 }

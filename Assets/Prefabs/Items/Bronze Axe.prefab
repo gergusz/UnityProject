@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1169758596497608951}
   - component: {fileID: 2992873014906465412}
   - component: {fileID: 2424821644707736091}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bronze Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}

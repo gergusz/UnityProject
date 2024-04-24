@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1316134212639337025}
   - component: {fileID: 790974124770085244}
   - component: {fileID: 1870596540821195257}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bronze Pickaxe
   m_TagString: Untagged
   m_Icon: {fileID: 0}

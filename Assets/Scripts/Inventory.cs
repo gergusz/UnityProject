@@ -30,6 +30,7 @@ public class Inventory : MonoBehaviour
         Vector2 scrollDelta = Input.mouseScrollDelta;
         if(scrollDelta.y != 0f)
         {
+  
             if (mainInventory[activeItem])
             {
                 mainInventory[activeItem].SetActive(false);
@@ -86,7 +87,7 @@ public class Inventory : MonoBehaviour
                 mainInventory[i] = item.gameObject;
                 mainInventory[i].transform.parent = firePoint;
                 mainInventory[i].transform.localPosition = Vector3.zero;
-                mainInventory[i].GetComponent<Rigidbody2D>().simulated = false;
+                mainInventory[i].GetComponent<Rigidbody2D>().isKinematic = true;
                 
                 
                 return true;
@@ -103,7 +104,7 @@ public class Inventory : MonoBehaviour
         ChangeItem();
 
         thrown.transform.parent = null;
-        thrown.GetComponent<Rigidbody2D>().simulated = true;
+        thrown.GetComponent<Rigidbody2D>().isKinematic = false;
         thrown.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         var colliderek = thrown.GetComponentsInChildren<BoxCollider2D>();
         foreach (var collider in colliderek)

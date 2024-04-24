@@ -6,7 +6,7 @@ public class Bow : Item
 {
 
     [SerializeField] private GameObject arrowPrefab;
-    [SerializeField] private float arrowSpeed = 30f;
+    private float arrowSpeed = 10f;
 
     private Transform firePoint;
     private List<GameObject> arrows = new List<GameObject>();
@@ -36,9 +36,33 @@ public class Bow : Item
         {
             arrow.gameObject.SetActive(true);
             Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
-            arrow.transform.position = new Vector3(firePoint.position.x + (_facingLeft?-1f:+1f), firePoint.position.y, firePoint.position.z);
-            arrow.transform.rotation = _facingLeft ? arrowPrefab.transform.rotation * Quaternion.Euler(0, 0, 180) : arrowPrefab.transform.rotation;
-            rb.velocity = (_facingLeft ? Vector2.left : Vector2.right) * arrowSpeed;
+            var mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            var playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+
+            if (_facingLeft &&mousepos.x>transform.position.x)
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().Flip();
+            }
+            else if(!_facingLeft && mousepos.x < transform.position.x)
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().Flip();
+            }
+
+            _facingLeft = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>()._facingLeft;
+            arrow.transform.localRotation = Quaternion.identity;
+            arrow.transform.position = new Vector3(playerPos.position.x , playerPos.position.y, playerPos.position.z);
+            
+            //arrow.transform.rotation = _facingLeft ? arrowPrefab.transform.rotation * Quaternion.Euler(0, 0, 180) : arrowPrefab.transform.rotation;
+            //rb.velocity = (_facingLeft ? Vector2.left : Vector2.right) * arrowSpeed;
+
+            var destination = mousepos -playerPos.position;
+            destination.z = 0f;
+            float angle = Mathf.Atan2(destination.y, destination.x);
+            angle *= Mathf.Rad2Deg;
+            arrow.transform.eulerAngles = new Vector3(0, 0, angle-45);
+
+            
+            rb.AddForce(destination.normalized * arrowSpeed, ForceMode2D.Impulse);
         }
     }
 
