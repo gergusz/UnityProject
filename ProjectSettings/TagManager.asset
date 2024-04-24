@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Tree
   - Ground
+  - DamageSource
   layers:
   - Default
   - TransparentFX

@@ -10,6 +10,16 @@ public class Axe : Item
     {
         useCd = 0.5f;
     }
+
+
+    public override void CollisionHandler(Collider2D collision)
+    {
+        base.CollisionHandler(collision);
+        transform.localRotation = Quaternion.Euler(0f, 0f, (collision.GetComponent<Movement>()._facingLeft ? 20f : 20f));
+        transform.localPosition = new Vector3(transform.localPosition.x, -0.2f);
+        transform.localScale = new Vector3(-1f, 1f);
+    }
+
     public override void Use()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

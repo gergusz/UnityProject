@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {    
     [SerializeField]
-    private Item[] mainInventory = new Item[10];
+    private GameObject[] mainInventory = new GameObject[10];
     private int activeItem = 0;
     Transform firePoint;
 
@@ -30,11 +30,14 @@ public class Inventory : MonoBehaviour
         Vector2 scrollDelta = Input.mouseScrollDelta;
         if(scrollDelta.y != 0f)
         {
-
-
-            if(activeItem==0 && scrollDelta.y < 0f)
+            if (mainInventory[activeItem])
             {
-                 activeItem = mainInventory.Length-1;
+                mainInventory[activeItem].SetActive(false);
+            }
+
+            if (activeItem==0 && scrollDelta.y < 0f)
+            {
+                activeItem = mainInventory.Length-1;
             }
             else if(activeItem == mainInventory.Length-1 && scrollDelta.y > 0f)
             {
@@ -49,7 +52,7 @@ public class Inventory : MonoBehaviour
         }
         if (Input.GetMouseButton(0)&& gameController.GetComponent<PlayerRespawn>().IsPlayerAlive() && mainInventory[activeItem] && useCdRemaining<=0.01)
         {
-            mainInventory[activeItem].Use();
+            mainInventory[activeItem].GetComponent<Item>().Use();
             useCdRemaining = itemsUseCd;
         }
         if (useCdRemaining > 0.01)
@@ -58,24 +61,19 @@ public class Inventory : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.G) && mainInventory[activeItem])
         {
-            ThrowItem();
+           ThrowItem();
         }
     }
 
-    void ChangeItem()
+    public void ChangeItem()
     {
         
-        var kid_sb = firePoint.GetComponent<SpriteRenderer>();
         if (mainInventory[activeItem] != null)
         {
-            kid_sb.sprite = mainInventory[activeItem].gameObject.GetComponent<SpriteRenderer>().sprite;
-            kid_sb.flipX = true;
-            itemsUseCd = mainInventory[activeItem].useCd;
+            mainInventory[activeItem].SetActive(true);
+            itemsUseCd = mainInventory[activeItem].GetComponent<Item>().useCd;
         }
-        else
-        {
-            kid_sb.sprite = null;
-        }
+
     }
 
 
@@ -85,23 +83,37 @@ public class Inventory : MonoBehaviour
         {
             if (mainInventory[i]==null)
             {
-                mainInventory[i] = item;
-                ChangeItem();
+                mainInventory[i] = item.gameObject;
+                mainInventory[i].transform.parent = firePoint;
+                mainInventory[i].transform.localPosition = Vector3.zero;
+                mainInventory[i].GetComponent<Rigidbody2D>().simulated = false;
+                
+                
                 return true;
             }
         }
         return false;
     }
 
+    
     public void ThrowItem()
     {
-        var thrown = mainInventory[activeItem].gameObject;
+        var thrown = mainInventory[activeItem];
         mainInventory[activeItem] = null;
         ChangeItem();
-     
+
+        thrown.transform.parent = null;
+        thrown.GetComponent<Rigidbody2D>().simulated = true;
+        thrown.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        var colliderek = thrown.GetComponentsInChildren<BoxCollider2D>();
+        foreach (var collider in colliderek)
+        {
+            collider.enabled = true;
+        }
         thrown.SetActive(true);
+
         bool _facingLeft = gameObject.GetComponent<Movement>()._facingLeft;
-        thrown.transform.position = new Vector3(transform.position.x + (_facingLeft?-2f:2f) , firePoint.position.y, transform.position.z);
+        thrown.transform.position = new Vector3(transform.position.x + (_facingLeft?-1.5f:1.5f) , firePoint.position.y, transform.position.z);
         thrown.GetComponent<Rigidbody2D>().AddForce(new Vector2(5f*(_facingLeft?-1:+1), 1f), ForceMode2D.Impulse);
         
     }

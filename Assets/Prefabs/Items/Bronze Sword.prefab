@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6166591296243660465}
   - component: {fileID: 5263074789123242775}
-  - component: {fileID: 3778913477914965512}
   - component: {fileID: 8685481644332241420}
   - component: {fileID: 1042925103405498346}
   - component: {fileID: 3123112571874686978}
+  - component: {fileID: 8152105203396861669}
   m_Layer: 0
   m_Name: Bronze Sword
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: -4157113887620887526, guid: dde559752a7ed8d4ba44e464e2307529, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -88,19 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3778913477914965512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985297426893124118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10e79b992dbf35a48804310b64d4d72a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useCd: 10
 --- !u!50 &8685481644332241420
 Rigidbody2D:
   serializedVersion: 4
@@ -127,7 +114,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1042925103405498346
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -218,3 +205,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8152105203396861669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985297426893124118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54bde4174f5fad34581117f434308c13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useCd: 10
