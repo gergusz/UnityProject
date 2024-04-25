@@ -47,9 +47,14 @@ public class EnemySpawnBox : MonoBehaviour
         {
             float xPos = playerTrans.position.x;
             xPos += Random.Range(3f, 15f) *(Random.Range(0f, 1f)>0.5f?1f:-1f);
-            Vector3 whereToSpawn = new Vector3(xPos, playerTrans.position.y, 0f) ;
-            enemyPool[tospawn].transform.position = whereToSpawn;
-            enemyPool[tospawn].gameObject.SetActive(true);
+            RaycastHit2D hit = Physics2D.Raycast(new Vector2(xPos, 24f), Vector2.down);
+            if (hit)
+            {
+                
+                Vector3 whereToSpawn =new Vector2(hit.point.x, hit.point.y+1);
+                enemyPool[tospawn].transform.position = whereToSpawn;
+                enemyPool[tospawn].gameObject.SetActive(true);
+            }
         }
     }
 }
