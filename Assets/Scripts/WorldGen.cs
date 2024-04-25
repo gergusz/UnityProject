@@ -12,7 +12,8 @@ public class WorldGen : MonoBehaviour
     [SerializeField] private GameObject deepBelowToGenerate;
     [SerializeField] private List<GameObject> oresToGenerate;
     [SerializeField] private GameObject treePrefab;
-    [SerializeField] private float generationDistance = 10f;
+    [SerializeField] private GameObject slimeKingPrefab;
+    private float generationDistance = 10f;
 
     private Camera cam;
 
@@ -35,34 +36,42 @@ public class WorldGen : MonoBehaviour
             {
                 generated = true;
                 float yOffset = 0;
-                float randomValue = Random.value;
+                float chance = Random.value;
 
-                if (randomValue < 0.05f)
+                if (chance < 0.05f) //gen below
                 {
                     yOffset = -1;
                 }
-                else if (randomValue > 0.95f)
+                else if (chance > 0.95f) //gen above
                 {
                     yOffset = 1;
                 }
                 else
                 {
-                    float randomValueTree = Random.value;
+                    float treeChance = Random.value;
 
-                    if (randomValueTree < 0.09f)
+                    if (treeChance < 0.09f) //gen tree
                     {
-                        Instantiate(treePrefab, new Vector2(transform.position.x, transform.position.y + 5.5f), treePrefab.transform.rotation);
+                        Instantiate(treePrefab, new Vector2(transform.position.x, transform.position.y + 6f), treePrefab.transform.rotation);
                     }
                 }
 
                 Vector3 generationPosition = generateToLeft ? new Vector3(transform.position.x - 1, transform.position.y + yOffset, transform.position.z) : new Vector3(transform.position.x + 1, transform.position.y + yOffset, transform.position.z);
                 Instantiate(objectToGenerate, generationPosition, Quaternion.identity);
 
+                var slimeKingChance = Random.value;
+
+                if (slimeKingChance < 0.003f) //gen kingslime
+                {
+                    Instantiate(slimeKingPrefab, new Vector3(generationPosition.x, generationPosition.y + 10, generationPosition.z), Quaternion.identity);
+                }
+
+
                 var currentY = transform.position.y + yOffset;
 
                 var amountOfBelow = Random.Range(-7, -3);
 
-                while (currentY > -50)
+                while (currentY > -52)
                 {
                     currentY -= 1;
 
@@ -72,7 +81,8 @@ public class WorldGen : MonoBehaviour
                     }
                     else
                     {
-                        if (Random.value < 0.06f)
+                        var oreChance = Random.value;
+                        if (oreChance < 0.06f) //gen ore
                         {
                             var oreToGenerate = oresToGenerate[Random.Range(0, oresToGenerate.Count)];
                             Instantiate(oreToGenerate, new Vector3(generationPosition.x, currentY, generationPosition.z), Quaternion.identity);

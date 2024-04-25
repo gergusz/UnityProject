@@ -38,6 +38,10 @@ public class EnemySpawnBox : MonoBehaviour
     }
     void SpawnSomething()
     {
+        if (playerTrans.position.y < -5)
+        {
+            return;
+        }
         var tospawn = Mathf.RoundToInt(Random.Range(0f, enemyPool.Count-1));
         if (!enemyPool[tospawn].gameObject.activeSelf)
         {
