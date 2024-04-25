@@ -30,6 +30,9 @@ public class FollowPlayer : MonoBehaviour
             if (newCamPos.y > 34.0f)
             {
                 newCamPos.y = 34.0f;
+            } else if (newCamPos.y < -45.0f)
+            {
+                newCamPos.y = -45.0f;
             }
 
             transform.position = newCamPos;
