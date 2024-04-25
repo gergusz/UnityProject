@@ -8,7 +8,7 @@ public class BlockItem : Item
 
     private void Start()
     {
-        useCd = 0.5f;
+        useCd = 0.1f;
     }
 
     public override void Use()

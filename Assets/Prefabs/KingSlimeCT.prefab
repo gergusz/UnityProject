@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 50
+  m_SortingOrder: 100
   m_Sprite: {fileID: 1355906844, guid: 810753e9f437ab94cbbdaef4a92d7302, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -150,11 +150,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 10
   currentLife: 0
-  invul: 0
+  invulTime: 0
+  maxInvulTime: 0.5
   lootTable:
   - {fileID: 8768643386321624072, guid: 081094913cadfa84fb38c6c8bd657083, type: 3}
   - {fileID: 1013040441130010602, guid: 01b6e29193c6dc74db045bc9ae99b2d2, type: 3}
   - {fileID: 6785667276664187104, guid: 1aa961d2408080e4f87fd053d3ba62f2, type: 3}
+  lootAmount: -1
 --- !u!61 &3770487956934011361
 BoxCollider2D:
   m_ObjectHideFlags: 0

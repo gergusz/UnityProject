@@ -6,7 +6,7 @@ public class Bow : Item
 {
 
     [SerializeField] private GameObject arrowPrefab;
-    private float arrowSpeed = 10f;
+    private float arrowSpeed = 15f;
 
     private Transform firePoint;
     private List<GameObject> arrows = new List<GameObject>();
@@ -15,7 +15,7 @@ public class Bow : Item
     private void Start()
     {
         firePoint = GameObject.Find("Fej").transform;
-        useCd = 0.1f;
+        useCd = 0.3f;
 
         for (var i = 0; i < 10; i++)
         {
@@ -50,7 +50,7 @@ public class Bow : Item
 
             _facingLeft = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>()._facingLeft;
             arrow.transform.localRotation = Quaternion.identity;
-            arrow.transform.position = new Vector3(playerPos.position.x , playerPos.position.y, playerPos.position.z);
+            arrow.transform.position = new Vector3(playerPos.position.x + (_facingLeft ? -1f : +1f) , playerPos.position.y, playerPos.position.z);
             
             //arrow.transform.rotation = _facingLeft ? arrowPrefab.transform.rotation * Quaternion.Euler(0, 0, 180) : arrowPrefab.transform.rotation;
             //rb.velocity = (_facingLeft ? Vector2.left : Vector2.right) * arrowSpeed;

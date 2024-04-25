@@ -722,7 +722,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.6782037, y: 1.6872654}
-  m_EdgeRadius: 0.1
+  m_EdgeRadius: 0.01
 --- !u!50 &1385877899825253780
 Rigidbody2D:
   serializedVersion: 4
@@ -792,6 +792,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  activeItem: 0
   useCdRemaining: 0
 --- !u!114 &1894889694101995178
 MonoBehaviour:
