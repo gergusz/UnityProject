@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2873908547733469456, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
       propertyPath: m_Name
-      value: stoneBlock Variant
+      value: Stone Block Item
       objectReference: {fileID: 0}
     - target: {fileID: 3081184400311016612, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
       propertyPath: m_Constraints
@@ -59,5 +59,27 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2873908547733469456, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3225712760437361073}
   m_SourcePrefab: {fileID: 100100000, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
+--- !u!1 &5375013841531967047 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2873908547733469456, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
+  m_PrefabInstance: {fileID: 7887436841799823191}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-3225712760437361073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5375013841531967047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c624ab0d2ec9fe34997d0ed38e8826e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useCd: 10
+  blockPrefab: {fileID: 4636037572500136387, guid: 76454e70af3c273468cc9f9caa35da64, type: 3}

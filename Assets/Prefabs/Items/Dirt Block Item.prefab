@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2873908547733469456, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
       propertyPath: m_Name
-      value: dirtBlock Variant
+      value: Dirt Block Item
       objectReference: {fileID: 0}
     - target: {fileID: 3081184400311016612, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
       propertyPath: m_Constraints
@@ -128,20 +128,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7452126028470341386, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2873908547733469456, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2086569842904058465}
+      addedObject: {fileID: 4047535950581697576}
   m_SourcePrefab: {fileID: 100100000, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
 --- !u!1 &578532945807068411 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2873908547733469456, guid: 13c4accca23753341bbd432d59aff6f9, type: 3}
   m_PrefabInstance: {fileID: 3451288104750314987}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2086569842904058465
+--- !u!114 &4047535950581697576
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,7 +151,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 578532945807068411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10e79b992dbf35a48804310b64d4d72a, type: 3}
+  m_Script: {fileID: 11500000, guid: c624ab0d2ec9fe34997d0ed38e8826e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   useCd: 10
+  blockPrefab: {fileID: 3995806525727778989, guid: 14fd68336b143f74bb83b7cab9850acb, type: 3}
