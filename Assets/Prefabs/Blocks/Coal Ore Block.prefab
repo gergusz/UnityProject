@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6427756273119332355
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3995806525727778989, guid: 14fd68336b143f74bb83b7cab9850acb, type: 3}
+      propertyPath: m_Name
+      value: Coal Ore Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5172148672593860037, guid: 14fd68336b143f74bb83b7cab9850acb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7705016389722437477, guid: ddcec4fcd9a83424fa83baa9ca746f6c, type: 3}
+    - target: {fileID: 8158197100623033542, guid: 14fd68336b143f74bb83b7cab9850acb, type: 3}
+      propertyPath: droppedItem
+      value: 
+      objectReference: {fileID: 3660582734653956319, guid: 7a8dee9931b53474d8cfbcc9e0432eea, type: 3}
+    - target: {fileID: 8158197100623033542, guid: 14fd68336b143f74bb83b7cab9850acb, type: 3}
+      propertyPath: droppedItemNumber
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960617688443059686, guid: 14fd68336b143f74bb83b7cab9850acb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.84135175
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960617688443059686, guid: 14fd68336b143f74bb83b7cab9850acb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.8221254
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960617688443059686, guid: 14fd68336b143f74bb83b7cab9850acb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960617688443059686, guid: 14fd68336b143f74bb83b7cab9850acb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960617688443059686, guid: 14fd68336b143f74bb83b7cab9850acb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960617688443059686, guid: 14fd68336b143f74bb83b7cab9850acb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960617688443059686, guid: 14fd68336b143f74bb83b7cab9850acb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960617688443059686, guid: 14fd68336b143f74bb83b7cab9850acb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960617688443059686, guid: 14fd68336b143f74bb83b7cab9850acb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960617688443059686, guid: 14fd68336b143f74bb83b7cab9850acb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 14fd68336b143f74bb83b7cab9850acb, type: 3}
