@@ -77,5 +77,12 @@ public class Bow : Item
         }
 
         return null;
-    }   
+    }
+    public override void CollisionHandler(Collider2D collision)
+    {
+        base.CollisionHandler(collision);
+        transform.localRotation = Quaternion.identity;
+        transform.localScale = new Vector2(-1f, 1f);
+    }
+
 }

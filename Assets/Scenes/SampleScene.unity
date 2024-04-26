@@ -7188,6 +7188,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8152105203396861669, guid: 6492a219de2373e468b6ca554d455527, type: 3}
+      propertyPath: swordSlash
+      value: 
+      objectReference: {fileID: 2154513416806671592, guid: ec463fd8ff1958d4ebf5adb480c492c2, type: 3}
+    - target: {fileID: 8152105203396861669, guid: 6492a219de2373e468b6ca554d455527, type: 3}
       propertyPath: rotateSword
       value: 100
       objectReference: {fileID: 0}

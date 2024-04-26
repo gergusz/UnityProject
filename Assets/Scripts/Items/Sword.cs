@@ -7,10 +7,12 @@ public class Sword : Item
 
   
     private CircleCollider2D kardBox;
-
+    [SerializeField]
+    private GameObject swordSlash;
+    private GameObject kardbox1;
     private void Start()
     {
-        useCd = 0.3f;
+        useCd = 0.7f;
         kardBox = gameObject.GetComponent<CircleCollider2D>();
         
     }
@@ -47,6 +49,13 @@ public class Sword : Item
     }
     public IEnumerator Slash()
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetTrigger("Slashin");
+        yield return new WaitForSeconds(0.55f);
+
+        kardbox1 = Instantiate<GameObject>(swordSlash, GameObject.FindGameObjectWithTag("Player").transform);
+        kardbox1.transform.localScale = new Vector2(-1, 1);
+        kardbox1.transform.localPosition = new Vector2(kardbox1.transform.localPosition.x - 1.7f, kardbox1.transform.localPosition.y);
+
         kardBox.radius = 1f;
         kardBox.offset = new Vector2(0.5f, 0.5f);
         kardBox.enabled = true;
@@ -58,13 +67,19 @@ public class Sword : Item
 
             kardBox.excludeLayers = players[0].layer;
         }
-        yield return new WaitForSeconds(useCd-0.1f);
+        
+        yield return new WaitForSeconds(0.1f);
 
         kardBox.enabled = false;
+        Destroy(kardbox1);
     }
     private void OnDisable()
     {
         kardBox.enabled = false;
+        if (kardbox1)
+        {
+            Destroy(kardbox1);
+        }
     }
 
 
