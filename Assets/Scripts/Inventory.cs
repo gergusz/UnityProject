@@ -86,7 +86,7 @@ public class Inventory : MonoBehaviour
             {
                 mainInventory[i] = item.gameObject;
                 mainInventory[i].transform.parent = firePoint;
-                mainInventory[i].transform.localPosition = Vector3.zero;
+                mainInventory[i].transform.localPosition = new Vector3(0,0,-1);
                 mainInventory[i].GetComponent<Rigidbody2D>().isKinematic = true;
                 
                 
