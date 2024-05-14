@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {    
     [SerializeField]
-    public GameObject[] mainInventory = new GameObject[10];
+    public GameObject[] mainInventory = new GameObject[20];
     public int activeItem = 0;
     Transform firePoint;
 
