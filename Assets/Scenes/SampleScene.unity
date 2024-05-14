@@ -3349,6 +3349,10 @@ PrefabInstance:
       value: 1.0232635
       objectReference: {fileID: 0}
     - target: {fileID: 4436011808715555055, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 20000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436011808715555055, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
       value: 1.1988707
       objectReference: {fileID: 0}
@@ -3368,9 +3372,13 @@ PrefabInstance:
       propertyPath: ColorModule.gradient.maxGradient.m_ColorSpace
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4436011808715555055, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8066558776914066458, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
       propertyPath: maxJumps
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8593039730757904937, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
       propertyPath: m_Name
