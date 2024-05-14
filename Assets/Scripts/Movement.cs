@@ -110,6 +110,7 @@ public class Movement : MonoBehaviour
             _rb.velocity = new Vector2(_rb.velocity.x, 0);
             _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             _jumps++;
+            gameObject.GetComponentInChildren<ParticleSystem>().Emit(20);
         }
     }
 

@@ -2442,13 +2442,89 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2178368905068555770, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
-      propertyPath: mainInventory.Array.size
-      value: 20
+    - target: {fileID: 619881101743165603, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 619881101743165603, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 619881101743165603, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 619881101743165603, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 619881101743165603, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 619881101743165603, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436011808715555055, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436011808715555055, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436011808715555055, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 56.806812
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436011808715555055, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436011808715555055, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: ColorModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436011808715555055, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1.0232635
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436011808715555055, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 1.1988707
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436011808715555055, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436011808715555055, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime0
+      value: 38743
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436011808715555055, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436011808715555055, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_ColorSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066558776914066458, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: maxJumps
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8593039730757904937, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627068516714767175, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627068516714767175, guid: b470a772dc0cfa94f89e8e29e0cc5bf6, type: 3}
+      propertyPath: m_RenderAlignment
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
