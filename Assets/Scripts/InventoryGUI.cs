@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,9 @@ public class InventoryGUI : MonoBehaviour
     private GameObject[] mainInventory;
     private int activeItem;
     public GameObject[] items;
-    Inventory inventoryComponent;
+    private Inventory inventoryComponent;
+    public GameObject panePrefab;
+    private List<GameObject> accPanes = new();
 
     void Awake()
     {
@@ -40,6 +43,7 @@ public class InventoryGUI : MonoBehaviour
             }
         }
 
+
     }
 
     public void SwitchToItem(int slotNumber)
@@ -52,5 +56,20 @@ public class InventoryGUI : MonoBehaviour
         inventoryComponent.ChangeItem();
     }
 
+    public void CreateAccessoryPane(GameObject accessory)
+    {
+        var pane = Instantiate(panePrefab);
+        accPanes.Add(pane);
+        pane.transform.SetParent(transform, false);
+        pane.transform.GetChild(0).GetComponent<Image>().sprite = accessory.GetComponent<SpriteRenderer>().sprite;
+        ((RectTransform)pane.transform).anchorMin = Vector2.right;
+        ((RectTransform)pane.transform).anchorMax = Vector2.right;
+        ((RectTransform)pane.transform).anchoredPosition = new Vector2(-55, accPanes.Count()*55);
+    }
 
+    public void DestroyAccessoryPane(GameObject accessory)
+    {
+        Destroy(accPanes.Last());
+        accPanes.Remove(accPanes.Last());
+    }
 }

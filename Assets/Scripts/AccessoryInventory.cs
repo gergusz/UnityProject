@@ -7,18 +7,20 @@ using UnityEngine;
 public class AccessoryInventory : MonoBehaviour
 {
     [SerializeField]
-    private List<GameObject> accessoryInventory = new();
+    public List<GameObject> accessoryInventory = new();
 
     public void AddAccessory(GameObject accessory)
     {
         accessoryInventory.Add(accessory);
         accessory.GetComponent<Accessory>().Equip(gameObject);
+        GameObject.FindGameObjectWithTag("UI").GetComponent<InventoryGUI>().CreateAccessoryPane(accessory);
     }
 
     public void RemoveAccessory(GameObject accessory)
     {
         accessoryInventory.Remove(accessory);
         accessory.GetComponent<Accessory>().Unequip(gameObject);
+        GameObject.FindGameObjectWithTag("UI").GetComponent<InventoryGUI>().DestroyAccessoryPane(accessory);
     }
 
     private void Update()
