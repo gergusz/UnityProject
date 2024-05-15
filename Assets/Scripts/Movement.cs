@@ -57,7 +57,8 @@ public class Movement : MonoBehaviour
             currVelocity.x = _horizontalAxis * speed;
             _rb.velocity = currVelocity;
             _animator.SetFloat("speed", Mathf.Abs(_horizontalAxis));
-
+            if (gameObject.GetComponentInChildren<TrailRenderer>().emitting)
+                gameObject.GetComponentInChildren<TrailRenderer>().emitting = false;
         }
         else
         {
@@ -110,7 +111,7 @@ public class Movement : MonoBehaviour
             _rb.velocity = new Vector2(_rb.velocity.x, 0);
             _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             _jumps++;
-            gameObject.GetComponentInChildren<ParticleSystem>().Emit(10);
+            transform.Find("DoubleJump").GetComponentInChildren<ParticleSystem>().Emit(10);
         }
     }
 
@@ -151,6 +152,8 @@ public class Movement : MonoBehaviour
         
         if (dashCounter == 3)
         {
+            gameObject.GetComponentInChildren<TrailRenderer>().emitting = true;
+            transform.Find("dashParticles").GetComponent<ParticleSystem>().Play();
             DisableVelocitySetting(0.1f);
             _rb.AddForce(new Vector2(40f * (_facingLeft ? -1 : 1), 1f), ForceMode2D.Impulse);
             
