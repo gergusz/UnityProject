@@ -20,7 +20,7 @@ public class AccessoryInventory : MonoBehaviour
     {
         accessoryInventory.Remove(accessory);
         accessory.GetComponent<Accessory>().Unequip(gameObject);
-        GameObject.FindGameObjectWithTag("UI").GetComponent<InventoryGUI>().DestroyAccessoryPane(accessory);
+        GameObject.FindGameObjectWithTag("UI").GetComponent<InventoryGUI>().DestroyLastAccessoryPane();
     }
 
     private void Update()
