@@ -12,11 +12,16 @@ public class InventoryGUI : MonoBehaviour
     private Inventory inventoryComponent;
     public GameObject panePrefab;
     private List<GameObject> accPanes = new();
+    private PlayerTakeDamage hpRef;
+    private List<GameObject> heartPanes = new();
+    private int currentHP;
+    public GameObject heartPrefab;
 
     void Awake()
     {
         mainInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().mainInventory;
         inventoryComponent = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        hpRef = inventoryComponent.GetComponent<PlayerTakeDamage>();
     }
 
     // Update is called once per frame
@@ -43,7 +48,24 @@ public class InventoryGUI : MonoBehaviour
             }
         }
 
-
+        currentHP = hpRef.currentLife;
+        while(heartPanes.Count != currentHP)
+        {
+            if (heartPanes.Count < currentHP)
+            {
+                var heart = Instantiate(heartPrefab);
+                heartPanes.Add(heart);
+                heart.transform.SetParent(transform, false);
+                ((RectTransform)heart.transform).anchorMin = Vector2.zero;
+                ((RectTransform)heart.transform).anchorMax = Vector2.zero;
+                ((RectTransform)heart.transform).anchoredPosition = new Vector2(-20 + heartPanes.Count()*50,30);
+            } 
+            else
+            {
+                Destroy(heartPanes.Last());
+                heartPanes.Remove(heartPanes.Last());
+            }
+        }
     }
 
     public void SwitchToItem(int slotNumber)
@@ -67,7 +89,7 @@ public class InventoryGUI : MonoBehaviour
         ((RectTransform)pane.transform).anchoredPosition = new Vector2(-55, accPanes.Count()*55);
     }
 
-    public void DestroyAccessoryPane(GameObject accessory)
+    public void DestroyLastAccessoryPane()
     {
         Destroy(accPanes.Last());
         accPanes.Remove(accPanes.Last());
